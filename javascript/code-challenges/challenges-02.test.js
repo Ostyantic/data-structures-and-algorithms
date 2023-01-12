@@ -107,8 +107,6 @@ For example: evenOdd([1,2,3]) returns ['odd','even','odd'].
 
 const evenOdd = (arr) => {
   const nArray = arr.map(num => {
-
-
     if (isNaN(num)) {
       return 'N/A';
     } else if (num % 2 === 0) {
@@ -164,6 +162,8 @@ const snorlaxAbilities = {
 };
 
 const extractAbilities = (arr) => {
+  const abilityName = arr.map(element => element.ability.name);
+  return abilityName;
   // Solution code here...
 };
 
@@ -305,7 +305,7 @@ describe('Testing challenge 8', () => {
   });
 });
 
-xdescribe('Testing challenge 9', () => {
+describe('Testing challenge 9', () => {
   test('It should return an array containing only the ability names', () => {
     expect(extractAbilities(snorlaxAbilities.abilities)).toStrictEqual(['gluttony', 'cute charm', 'immunity']);
     expect(extractAbilities(snorlaxAbilities.abilities).length).toStrictEqual(3);
