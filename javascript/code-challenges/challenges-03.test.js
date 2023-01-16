@@ -52,6 +52,8 @@ For example, oddValues([1,2,3]) returns [1,3].
 ------------------------------------------------------------------------------------------------ */
 
 const oddValues = (arr) => {
+  const oddArray = arr.filter(odds => odds % 2 === 1);
+  return oddArray;
   // Solution code here...
 };
 
