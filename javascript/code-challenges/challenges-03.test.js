@@ -38,6 +38,8 @@ For example, containsAnd(['panda', 'ran', 'and']) returns ['panda', 'and'].
 ------------------------------------------------------------------------------------------------ */
 
 const containsAnd = (arr) => {
+  const newArray = arr.filter(string => string.includes('and'));
+  return newArray;
   // Solution code here...
 };
 
