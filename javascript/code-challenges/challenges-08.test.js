@@ -55,15 +55,17 @@ let characters = [
 const sortByChildren = (charArray) => {
   // Solution code here...
 
-  charArray.sort((a, b) => {
+  return charArray.sort((a, b) => {
     if (a.children.length < b.children.length) {
       return -1;
-    }
-    if (a.house < b.house){
-      return -1;
+    } else if (a.children.length > b.children.length){
+      return 1;
+    } else {
+      return a.house < b.house? -1 : 1;
     }
   });
-  console.log(charArray[0].name);
+
+
 
 };
 
@@ -77,7 +79,8 @@ Write a function named containsW that takes in a string. This function should us
 const containsW = (str) => {
   // Solution code here...
   const hasW = /w/g;
-  hasW.test(str);
+  return hasW.test(str);
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -94,8 +97,9 @@ For example:
 
 const isNum = (input) => {
   // Solution code here...
-  const hasNumbers =/[1-9]/g;
-  hasNumbers.test(input);
+  let hasNumbers = /[0-9]/g;
+  return hasNumbers.test(input);
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -106,6 +110,8 @@ Write a function named containsWorld that takes in a string or number of any len
 ------------------------------------------------------------------------------------------------ */
 
 const containsWorld = (input) => {
+  let hasWORLD = /(world)/g;
+  return hasWORLD.test(input);
   // Solution code here...
 };
 
