@@ -94,6 +94,8 @@ For example:
 
 const isNum = (input) => {
   // Solution code here...
+  const hasNumbers =/[1-9]/g;
+  hasNumbers.test(input);
 };
 
 /* ------------------------------------------------------------------------------------------------
