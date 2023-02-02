@@ -160,6 +160,13 @@ Do not use the vertical bar (pipe) in your pattern.
 
 const matchMonth = (input) => {
   // Solution code here...
+  let pattern = /(oct)\w*/ig;
+
+  if(pattern.test(input)){
+    return ;
+  } else {
+    return false;
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
