@@ -125,6 +125,11 @@ Return an array containing all the matches.
 
 const isCapitalized = (str) => {
   // Solution code here...
+  const beginWithCapital = /[A-Z]\w+/g;
+
+  //helped by Justin Hamerly
+  // return result if result is truthy else return []
+  return str.match(beginWithCapital) || [];
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -135,6 +140,10 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 
 const citiesAtoJ = (arr) => {
   // Solution code here...
+  const patterAtoJ = /^[a-j]/i;
+  let filteredCities = arr.filter(city => patterAtoJ.test(city));
+  console.log(filteredCities);
+  return filteredCities;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -284,7 +293,7 @@ describe('Testing challenge 6', () => {
   });
 });
 
-xdescribe('Testing challenge 7', () => {
+describe('Testing challenge 7', () => {
   test('It should match any of the acceptable inputs', () => {
     expect(matchMonth('Oct')).toBeTruthy();
     expect(matchMonth('oct')).toBeTruthy();
