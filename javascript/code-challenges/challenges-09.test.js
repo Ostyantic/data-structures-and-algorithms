@@ -133,6 +133,7 @@ const characters = [
 
 const getHouses = (arr) => {
   let houses = [];
+  arr.map(element => houses.push(element.house));
   // Solution code here...
   return houses;
 };
