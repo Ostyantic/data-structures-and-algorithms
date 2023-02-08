@@ -36,8 +36,8 @@ const findMax = (matrix) => {
         highestNum = matrix[i][j];
       }
     }
-    return highestNum;
   }
+  return highestNum;
   // Solution code here...
 };
 
@@ -56,6 +56,13 @@ For example:
 return: 35
 ------------------------------------------------------------------------------------------------ */
 const totalSum = (matrix) => {
+  let totalNum = 0;
+  for (let i = 0; i <= matrix.length - 1; i++){
+    for (let j = 0; j <= matrix[i].length -1; j++){
+      totalNum += matrix[i][j];
+    }
+  }
+  return totalNum;
   // Solution code here...
 };
 
