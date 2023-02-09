@@ -154,6 +154,8 @@ const hasChildrenValues = (arr, character) => {
 
   // console.log('Characters of GoT:', arr);
   // console.log('Single Character:', character);
+
+  // Collabbed with Yuri & Brenden
   for (let i = 0; i < arr.length; i++){
     if((arr[i].name === character) && Object.values(arr[i]).length > 3) {
       return true;
