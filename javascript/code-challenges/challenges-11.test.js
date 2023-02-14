@@ -20,13 +20,12 @@ Becomes:
 
 function transformToLis(obj){
 
-
   let newArr = Object.entries(obj);
-  console.log(newArr);
+  // console.log(newArr);
   let updatedARR = newArr.map((ele, i) => {
     return `<li>${ele.join(': ')}</li>`;
   });
-  console.log(updatedARR);
+  // console.log(updatedARR);
   return updatedARR;
   // Solution code here...
 }
@@ -42,6 +41,16 @@ For example, count(5, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]) returns 4.
 ------------------------------------------------------------------------------------------------ */
 
 const count = (target, input) => {
+  let counter = 0;
+  input.map(arr =>
+    arr.map(num => {
+      if(num === target){
+        counter++;
+      }
+    })
+  );
+  console.log(counter);
+  return counter;
   // Solution code here...
 };
 
