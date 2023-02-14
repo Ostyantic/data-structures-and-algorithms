@@ -91,12 +91,12 @@ For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 
 const divisibleByFiveTwoToThePower = (input) => {
 
-  // console.log('Original Array:', input);
+  console.log('Original Array:', input);
   let filteredArr = input.map(arr => arr.filter(num => (num % 5 === 0
-  )));
+   && typeof num === 'number')));
   let filteredArrSquared = filteredArr.map(arr => arr.map(num => Math.pow(2, num)));
-  console.log(filteredArr);
-  console.log(filteredArrSquared);
+  // console.log(filteredArr);
+  // console.log(filteredArrSquared);
 
   return filteredArrSquared;
   // Solution code here...
@@ -165,6 +165,16 @@ let starWarsData = [{
 }];
 
 let findMaleAndFemale = (data) => {
+  let filteredArr = data.filter(obj => {
+    if (obj.gender === 'male' || obj.gender === 'female') {
+      return obj.name;
+    }
+  });
+  // console.log(filteredArr);
+  let namesArr = filteredArr.map(obj => obj.name);
+  // console.log(namesArr);
+
+  return namesArr.join(' and ');
   // Solution code here...
 };
 
