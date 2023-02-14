@@ -65,6 +65,15 @@ For example, [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6,]] returns 66.
 ------------------------------------------------------------------------------------------------ */
 
 const totalSum = (input) => {
+  let counter = 0;
+  for (let i = 0; i <= input.length - 1; i++){
+    // console.log(`Array # ${i + 1}`);
+    for (let j = 0; j <= input[i].length - 1; j++){
+      // console.log(`Array # ${i + 1}, item @ index ${j}: ${input[i][j]}`);
+      counter += input[i][j];
+    }
+  }
+  return counter;
   // Solution code here...
 };
 
