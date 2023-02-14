@@ -165,7 +165,7 @@ let starWarsData = [{
 }];
 
 let findMaleAndFemale = (data) => {
-  console.log(data);
+  // console.log(data);
   let filteredArr = data.filter(obj => obj.gender ==='male' || obj.gender ==='female' ? obj : false)
     .map(obj => obj.name);
 
@@ -182,7 +182,12 @@ Write a function named findShortest that, given the Star Wars data from Challeng
 ------------------------------------------------------------------------------------------------ */
 
 let findShortest = (data) => {
+  // let newArr = data.filter(character => Math.min(Number(character.height)));
 
+  // let smallest = Math.min(...newArr);
+
+  // console.log(newArr);
+  // console.log(smallest);
   // Solution code here...
 };
 
