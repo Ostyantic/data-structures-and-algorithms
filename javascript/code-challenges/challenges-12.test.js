@@ -25,7 +25,7 @@ const validatePin = (pin) => {
   // console.log(pin);
   let fourDigits = /^\d{4}$/g;
   let validate =  fourDigits.test(pin);
-  console.log(validate);
+  // console.log(validate);
   return validate;
   // Solution code here...
 };
@@ -75,6 +75,8 @@ Note: if you ever need to validate an email using a regex in practice, the Inter
 ------------------------------------------------------------------------------------------------ */
 
 const validateEmail = (email) => {
+  let pattern = /^[a-z0-9]+.?[a-z0-9]+?@[a-z0-9]+.(net|com|org)$/gi;
+  return pattern.test(email);
   // Solution code here...
 };
 
@@ -100,6 +102,8 @@ Return either true or false.
 ------------------------------------------------------------------------------------------------ */
 
 const validatePhoneNumber = (phoneNumber) => {
+  let pattern = /^(\(\d{3}\)|\d{3})[ -]?(\d{3})[ -]?(\d{4})$/;
+  return pattern.test(phoneNumber);
   // Solution code here...
 };
 
