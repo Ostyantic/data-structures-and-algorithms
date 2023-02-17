@@ -22,7 +22,7 @@ If the PIN is four numerical digits long, return true. Otherwise, return false.
 ------------------------------------------------------------------------------------------------ */
 
 const validatePin = (pin) => {
-  console.log(pin);
+  // console.log(pin);
   let fourDigits = /^\d{4}$/g;
   let validate =  fourDigits.test(pin);
   console.log(validate);
@@ -39,7 +39,7 @@ If the word is between 5 and 10 characters long, return true. Otherwise, return 
 ------------------------------------------------------------------------------------------------ */
 
 const validateWord = (word) => {
-  let fiveThruTen = /^\D{5,10}$/g;
+  let fiveThruTen = /^\D{5,10}$/gi;
   return fiveThruTen.test(word);
   // Solution code here...
 };
@@ -53,6 +53,8 @@ If it does, return true. If not, return false.
 ------------------------------------------------------------------------------------------------ */
 
 const hasNumber = (string) => {
+  let pattern = /\D{1,}\d{1,}/gi;
+  return pattern.test(string);
   // Solution code here...
 };
 
