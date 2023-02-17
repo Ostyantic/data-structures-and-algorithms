@@ -39,6 +39,8 @@ If the word is between 5 and 10 characters long, return true. Otherwise, return 
 ------------------------------------------------------------------------------------------------ */
 
 const validateWord = (word) => {
+  let fiveThruTen = /^\D{5,10}$/g;
+  return fiveThruTen.test(word);
   // Solution code here...
 };
 
