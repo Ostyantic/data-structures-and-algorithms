@@ -36,7 +36,7 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['this
 ------------------------------------------------------------------------------------------------ */
 
 const findHappiness = (arr) => {
-  console.log(arr);
+  // console.log(arr);
   let happyArr = [];
   arr.forEach(happy => {
     if (happy.includes(':)')) {
@@ -56,6 +56,12 @@ For example, (123) 456-7890 returns 1234567890
 ------------------------------------------------------------------------------------------------ */
 
 const standardizePhoneNumbers = (arr) => {
+  // console.log(arr);
+  let tenDigitNumber = arr.map(number => number.split('')
+    .filter(digit => !isNaN(digit))
+    .join('')
+    .replace(' ', ''));
+  return tenDigitNumber;
   // Solution code here...
 };
 
@@ -68,6 +74,17 @@ For example, 'abcdefg' returns 'bdf'
 ------------------------------------------------------------------------------------------------ */
 
 const onlyOddChars = (str) => {
+  let splitStrings = str.split('');
+  let solution = [];
+  for (let i = 0; i <= splitStrings.length - 1; i++){
+    if (i % 2 !== 0) {
+      solution.push(splitStrings[i]);
+    }
+  }
+  let result = solution.join('');
+  // console.log(splitStrings);
+  // console.log(solution);
+  return result;
   // Solution code here...
 };
 
@@ -78,6 +95,8 @@ Write a function named allHappy that takes in an array of strings and returns a 
 ------------------------------------------------------------------------------------------------ */
 
 const allHappy = (arr) => {
+  const hasSmiley = string => string.includes(':)');
+  return arr.every(hasSmiley);
   // Solution code here...
 };
 
