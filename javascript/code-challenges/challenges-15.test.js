@@ -114,6 +114,8 @@ let starWarsData = [{
 }];
 
 let biggerThanLuke = (arr) => {
+  return arr.filter(char => Number(char.mass) > 77 ? char : false)
+    .map(char => char.name).join(' - ');
   // Solution code here...
 };
 
