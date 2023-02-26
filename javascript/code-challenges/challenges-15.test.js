@@ -34,6 +34,11 @@ For example, ['apple', 'banana', 'MacGyver'] returns ['Apple', 'Banana', 'MacGyv
 ------------------------------------------------------------------------------------------------ */
 
 const toTitleCase = (arr) => {
+  // const firstString = arr[0];
+  // console.log(firstString);
+  // const slicedStr = firstString.slice(1);
+  // console.log(slicedStr);
+  return arr.map(str => str.charAt(0).toUpperCase() + str.slice(1));
   // Solution code here...
 };
 
